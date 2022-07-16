@@ -70,7 +70,7 @@ while True:
 
   elif event == "=":
       display = str(eval(equation))
-      if len(display) > 3 and display[-2] == "." and display[-1] == "0":
+      if len(display) > 3 and display[-2:] == ".0":
         display = display[:-2]
       update_display()
       equation = display
